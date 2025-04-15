@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/feedback_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/scan_qr_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Feedback..." />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:indeterminateTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_text_view"
+        app:layout_constraintStart_toStartOf="@+id/feedback_text_view"
+        app:layout_constraintTop_toTopOf="@+id/feedback_text_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share_logs_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@null"
+        app:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_text_view"
+        app:layout_constraintTop_toTopOf="@+id/feedback_text_view"
+        app:srcCompat="@drawable/ic_share"
+        app:tint="@color/yellow" />
+
+    <Button
+        android:id="@+id/scan_qr_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@null"
+        android:text="@string/scan_qr_button"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toTopOf="@+id/start_static_scan_button"
+        app:layout_constraintEnd_toEndOf="@+id/start_static_scan_button"
+        app:layout_constraintStart_toStartOf="@+id/start_static_scan_button" />
+
+    <Button
+        android:id="@+id/start_static_scan_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/gray"
+        android:contentDescription="@null"
+        android:enabled="false"
+        android:text="@string/static_start"
+        android:textColor="@color/gray_dark"
+        app:layout_constraintBottom_toTopOf="@+id/stop_static_scan_button"
+        app:layout_constraintEnd_toEndOf="@+id/stop_static_scan_button"
+        app:layout_constraintStart_toStartOf="@+id/stop_static_scan_button" />
+
+    <Button
+        android:id="@+id/stop_static_scan_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/gray"
+        android:contentDescription="@null"
+        android:enabled="false"
+        android:text="@string/static_stop"
+        android:textColor="@color/gray_dark"
+        app:layout_constraintBottom_toTopOf="@+id/start_dynamic_scan_button"
+        app:layout_constraintEnd_toEndOf="@+id/start_dynamic_scan_button"
+        app:layout_constraintStart_toStartOf="@+id/start_dynamic_scan_button" />
+
+    <Button
+        android:id="@+id/start_dynamic_scan_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/gray"
+        android:contentDescription="@null"
+        android:enabled="false"
+        android:text="@string/dynamic_start"
+        android:textColor="@color/gray_dark"
+        app:layout_constraintBottom_toTopOf="@+id/stop_dynamic_scan_button"
+        app:layout_constraintEnd_toEndOf="@+id/stop_dynamic_scan_button"
+        app:layout_constraintStart_toStartOf="@+id/stop_dynamic_scan_button" />
+
+    <Button
+        android:id="@+id/stop_dynamic_scan_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/gray"
+        android:contentDescription="@null"
+        android:enabled="false"
+        android:text="@string/dynamic_stop"
+        android:textColor="@color/gray_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

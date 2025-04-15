@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">JacekApp</string>
+    <string name="downloading_qr_codes_error">Nie udało się pobrać kodów QR z serwera.</string>
+    <string name="try_again_button">Spróbuj ponownie</string>
+    <string name="qr_scanner_install_failed">Przed uruchomieniem skanera kodów QR upewnij się, że masz dostęp do Internetu oraz, że masz zainstalowaną aplikację Google Play.</string>
+    <string name="zxing_scanner_prompt">Zeskanuj kod QR oznaczony tekstem \"PW\".</string>
+    <string name="qr_scanning_error">Wystąpił błąd podczas skanowania kodu QR.</string>
+    <string name="invalid_qr_format">Nieprawidłowy format kodu QR.</string>
+    <string name="logs_saving_error">Błąd zapisu logów</string>
+    <string name="logs_sharing_error">Błąd udostępniania logów</string>
+    <string name="no_logs_to_share">Brak logów do udostępnienia.</string>
+    <string name="logs_sharing_title">Udostępnianie logów</string>
+    <string name="qr_label">QR: %s</string>
+    <string name="localization_label">Lokalizacja: %s</string>
+    <string name="measure_date_label">Data pomiaru: %s</string>
+    <string name="gps_and_bluetooth_info">Upewnij się, że masz włączony GPS oraz Bluetooth.</string>
+    <string name="required_permissions_info">Bez niezbędnych uprawnień aplikacja nie będzie działać prawidłowo.</string>
+    <string name="dynamic_start">POMIAR DYNAMICZNY - START</string>
+    <string name="dynamic_stop">POMIAR DYNAMICZNY - STOP</string>
+    <string name="static_start">POMIAR STATYCZNY - START</string>
+    <string name="static_stop">POMIAR STATYCZNY - STOP</string>
+    <string name="scan_qr_button">ZESKANUJ KOD QR</string>
+    <string name="positioning_canceled">Przerwano pozycjonowanie</string>
+    <string name="user_position">Twoja pozycja:\n%s</string>
+    <string name="static_start_action">Rozpoczęto pomiar statyczny.</string>
+    <string name="static_stop_action">Zakończono pomiar statyczny.</string>
+    <string name="dynamic_start_action">Rozpoczęto pomiar dynamiczny.</string>
+    <string name="dynamic_stop_action">Zakończono pomiar dynamiczny.</string>
+</resources>
