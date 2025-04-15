@@ -118,18 +118,21 @@ class MainViewModel @Inject constructor(
 
     fun updateLogs(
         qrCodeData: QrCodeData,
-        shouldAppend: Boolean,
+        dynamicMeasureFinished: Boolean,
     ) {
         initPositioningLogEntryIfNeeded()
         _positioningLogEntry?.qrScanTimestamp = System.currentTimeMillis()
         _positioningLogEntry?.qrPosition = "${qrCodeData.x} ${qrCodeData.y}"
-        if (shouldAppend) {
+        if (dynamicMeasureFinished) {
             appendPositioningLog()
         }
     }
 
     private fun appendPositioningLog() {
-        _positioningLogEntry?.let { logger.appendPositioningLog(it) }
+        _positioningLogEntry?.let {
+            Log.d("tag_test_case_1", "qrPosition: ${_positioningLogEntry?.qrPosition}; tag: ${_positioningLogEntry?.tagType}")
+            logger.appendPositioningLog(it)
+        }
         _positioningLogEntry = null
     }
 

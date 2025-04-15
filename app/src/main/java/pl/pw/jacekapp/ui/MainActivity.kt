@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
             val dynamicMeasureFinished =
                 viewModel.positioningLogEntry?.tagType == TagType.STOP_DYNAMIC
             if (dynamicMeasureFinished) {
+                updateFeedback(R.string.dynamic_measure_finished)
                 scanQrButton.activate()
             } else {
                 updateFeedback(getString(R.string.user_position, "${qrCodeData.x} ${qrCodeData.y}"))
@@ -126,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                 startStaticScanButton.activate()
                 startDynamicScanButton.activate()
             }
-            viewModel.updateLogs(qrCodeData, shouldAppend = dynamicMeasureFinished)
+            viewModel.updateLogs(qrCodeData, dynamicMeasureFinished)
         }
     }
 
@@ -169,7 +170,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        updateFeedback(R.string.gps_and_bluetooth_info)
+        updateFeedback(R.string.test_start_info)
         scanQrButton.setOnClickListener {
             launchQrScanner()
         }
@@ -200,10 +201,10 @@ class MainActivity : AppCompatActivity() {
         tagType: TagType,
     ) {
         val activeAction = when (tagType) {
-            TagType.START_STATIC -> R.string.static_start_action
-            TagType.STOP_STATIC -> R.string.static_stop_action
-            TagType.START_DYNAMIC -> R.string.dynamic_start_action
-            TagType.STOP_DYNAMIC -> R.string.dynamic_stop_action
+            TagType.START_STATIC -> R.string.static_measure_started
+            TagType.STOP_STATIC -> R.string.static_measure_stopped
+            TagType.START_DYNAMIC -> R.string.dynamic_measure_started
+            TagType.STOP_DYNAMIC -> R.string.dynamic_measure_path_end
         }
         updateFeedback(activeAction)
         viewModel.updateLogs(tagType)

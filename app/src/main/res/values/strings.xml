@@ -13,7 +13,7 @@
     <string name="qr_label">QR: %s</string>
     <string name="localization_label">Lokalizacja: %s</string>
     <string name="measure_date_label">Data pomiaru: %s</string>
-    <string name="gps_and_bluetooth_info">Upewnij się, że masz włączony GPS oraz Bluetooth.</string>
+    <string name="test_start_info">Upewnij się, że masz włączony GPS oraz Bluetooth. Zeskanuj kod QR w celu wykonania pierwszego pomiaru.</string>
     <string name="required_permissions_info">Bez niezbędnych uprawnień aplikacja nie będzie działać prawidłowo.</string>
     <string name="dynamic_start">POMIAR DYNAMICZNY - START</string>
     <string name="dynamic_stop">POMIAR DYNAMICZNY - STOP</string>
@@ -22,8 +22,9 @@
     <string name="scan_qr_button">ZESKANUJ KOD QR</string>
     <string name="positioning_canceled">Przerwano pozycjonowanie</string>
     <string name="user_position">Twoja pozycja:\n%s</string>
-    <string name="static_start_action">Rozpoczęto pomiar statyczny.</string>
-    <string name="static_stop_action">Zakończono pomiar statyczny.</string>
-    <string name="dynamic_start_action">Rozpoczęto pomiar dynamiczny.</string>
-    <string name="dynamic_stop_action">Zakończono pomiar dynamiczny.</string>
+    <string name="dynamic_measure_started">Rozpoczęto pomiar dynamiczny. Idź wzdłuż zaplanowanej ścieżki.</string>
+    <string name="dynamic_measure_path_end">Znajdujesz się na końcu zaplanowanej ścieżki. Zeskanuj kod QR punktu docelowego.</string>
+    <string name="dynamic_measure_finished">Zakończono pomiar dynamiczny. Zeskanuj kolejny kod QR w celu rozpoczęcia nowego pomiaru.</string>
+    <string name="static_measure_started">Rozpoczęto pomiar statyczny. Poczekaj chwilę w celu zebrania pomiarów w tym miejscu.</string>
+    <string name="static_measure_stopped">Zakończono pomiar statyczny. Zeskanuj kolejny kod QR w celu rozpoczęcia nowego pomiaru.</string>
 </resources>

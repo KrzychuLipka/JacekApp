@@ -17,6 +17,7 @@
         android:padding="24dp"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/scan_qr_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
